@@ -1,0 +1,98 @@
+
+------------------------Navigation  dir copy , list files , 
+- pwd  ( show current directory)
+- cd downloads( Navigate to different folders)
+- mkdir myfolder ( helps in creating a folder)
+- cd myfolder
+- cd .. (space dot dot)(helps to go back to previous folder)
+- cd ../.. ( helps in reaching back to two previous 
+
+- (folder in current example from myfolder to users)
+- ls ( helps in showing list of files in current directory)
+- clear  or ctrl l ( to clear the terminal command)
+
+--------------Git Create copy remove rename  
+Create
+- touch index.html  (How to create new files) 
+- touch myfolder/style.css ( create new file in subfolder from main folder)
+copy files
+-  cp style.css .. ( copy the file from current dir to previous dir by using ..)
+
+Remove or delete
+- rm ( helps to delete the file )
+- rm -rf  new-folder/  ( helps to delete the folders)
+
+rename 
+- mv ( helps in renaming the file)
+----------------------Git Publish Process 
+- git init( initialize git on folder)
+- git init -- help (open file in browser)
+
+- git status (check the status of that folder)
+- git status ( checking the status) 
+
+- git add index.html style.css (staging to git)
+- git add . (it will help in adding all files in folder)
+
+- git rm --cached index.html ( to remove files from stage selection)
+
+- git config --global user.name john 
+- git config --global user.email john@gmail.com
+- git commit -m "Initial commit"
+
+---------------------Git Logs 
+- git log ( to check this history of all commits in the folder or rep)
+- git log --oneline ( shorter way to check logs )
+
+------------------git bash editor 
+step1 - press i for editing and 
+Step2 - then escape  :wq and then enter (to enter ,save and close)
+-----------------git bash to visual studio editor 
+code ~/.gitconfig
+git config --global core.editor "code --wait"
+git config --global --unset core.editor
+
+
+-----------------Head
+git show  head( to check head points to last commit)
+git show HEAD~1 ( first commit like wise ~2 ~3 )
+
+------------------git checkout (undelete the last code) (readoonly and safe)
+all we last updated will be discarded
+git checkout (can go back in time and check different states of our project)
+it will delete the code which was last added
+git checkout script.js
+git checkout .
+git checkout *
+-------------------- git provious state checkput 
+$ git checkout 5e48486 (id of that state) (it checkout is to go back in time and check the previous states of the project)
+git checkout master (in order to go back to master from previous state)
+
+--------------------git revert - undo things in git
+$ git revert eb00df2 (takes the specified commit , inverse the changes from the commit and create a new revert commit)
+--------------------git reset - it can permanently delete your work
+
+git reset --mixed eb00df2 (previous stage id from which u want to remove)
+
+git reset --soft eb00df2 (staged)
+git reset . (unstage both the files) | checkout
+
+git reset --hard eb00df2 (delete all above and changes in file simultaneously)
+
+---------------------ignore 
+create .gitignore file 
+add new files
+for old files ( git rm -r --cached .)(clean the cache first)
+ ----------------ignore folder 
+ # Auto generated files 
+auto-gen-files/text3.txt
+auto-gen-files/text4.txt
+
+# Auto generated files (ignore all files in that folder) 
+auto-gen-files/* 
+# Auto generated files  (ignore only txt files in that folder)
+auto-gen-files/*.txt
+---------------------------------------updating from github
+-----------------------------updating this from feature branch
+----------------------------update from dev branch
+-----------------------checking out git conflict from dev branch

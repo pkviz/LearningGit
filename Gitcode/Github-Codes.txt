@@ -1,0 +1,75 @@
+------------------------------------------------------------
+Recalling Steps 
+pwd
+ls
+git status 
+git add . 
+git commit -m "message"
+git log --oneline
+-----------Git Repository Codes------------------------------
+
+
+-----------------Git Local folder repo to sync with github folder repo
+$ git remote add origin https://github.com/pkviz/LearningGit.git
+when we run this program our local repo will get connected to github
+
+-------------git config
+git config --global user.name
+git config --global user.email
+git config --global user.name puneet
+git config --global user.email xyz@gmail.com
+
+---------------git push (from local to github) 
+git push origin master 
+branch : master
+
+--------------git pull(from github to local)
+git pull origin master
+
+----------shorter way to pull 
+specifying name of origin and name of the branch master
+git branch --set-upstream-to=origin/master master
+
+---------------------Branch Codes---------------------------------------- 
+git branch feature-1 (add new branch with name feature-1)
+git branch (check list of branches)
+
+--------------checkout
+git checkout features (switch to another branchmaster)
+git checkout -b features1 (need to create new branch and also switch immediately)
+
+---------------delete 
+ git branch -D features1 ( we cant delete in current branch)
+----------add branch to github repository
+git push origin features
+
+---------- delete branch to github repo 
+git push origin --delete features
+
+---------- add git repo update to local repo
+git pull origin features
+git push origin features 
+git checkout --track origin/features
+
+------------- sorter way to add and commit ( only modified and deleted files)
+git commit -am "update from dev branch"
+
+------------------Merge Branch
+- $ git merge features
+- $ git merge dev
+-----------------Merge conflict
+ correct the code 
+ git add .
+ git commit ( only this command for commit)
+ ----------------merge from master to feature git rebase
+   git rebase master  (commit from master branch to feature branch )
+
+----------------Git CLone from github to local folder 
+cd | mkdir | 
+git clone https://github.com/pkviz/LearningGit.git
+---------------------contribute to github 
+
+----------------collaboration
+push local repo to github repository 
+git remote origin url (from the repo)
+git push origin master 
