@@ -73,3 +73,6 @@ git clone https://github.com/pkviz/LearningGit.git
 push local repo to github repository 
 git remote origin url (from the repo)
 git push origin master 
+
+-----------git clone a specific branch 
+git clone --branch <branchname> <remote-repo-url>
